@@ -5,13 +5,71 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="instagram.css">
 </head>
 <body>
-	<img src="C:\Users\User\Desktop\WebDev_2025\Lab2\instagram\WebDev_2025.png">
-		<div>
-		<div>
-			<div></div>
+		<div id="main-part">
+			<div>
+				<img id="phone" src="instagram.jpg">
+			</div>
+			<div id="right-part">
+				<div id="register-block">
+					<img id="insta-logo" src="logo.jpg"><br>
+					<input type="email" name="email" placeholder="Телефон, имя пользователя или эл. адрес" aria-label="Телефон, имя пользователя или эл. адрес">
+					<input type="password" name="password" placeholder="Пароль">
+					<button id="login-button" type="submit">Войти</button>
+					<div id="or">
+						<hr><p id="just">или</p><hr>
+					</div>
+					<div id="by-facebook" onclick="window.location.href=''">
+						<img id="facebook" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-64.png"><p>Войти через Facebook</p>
+					</div>
+					<a id="forget-password" href="">Забыли пароль?</a>
+				</div>
+				<div id="no-account">
+					<p>У вас ещё нет аккаунта? <a class="creation-link" href="">Зарегистрироваться</a></p>
+				</div>
+				<div id="download-app">
+					<p align="center">Установите приложение.</p>
+				</div>
+				<div id="google-play">
+					<ul>
+						<li><a href=""><img class="market" src="https://static.cdninstagram.com/rsrc.php/v4/yr/r/fDjwyLC88oO.png"></a></li>
+						<li><a href=""><img class="market" src="https://static.cdninstagram.com/rsrc.php/v4/yv/r/_UbeIRgTpG-.png"></a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div>
+
+		<footer>
+			<div id="first-line">
+				<ul>
+					<li><a href="">Meta</a></li>
+					<li><a href="">Информация</a></li>
+					<li><a href="">Блог</a></li>
+					<li><a href="">Вакансии</a></li>
+					<li><a href="">Помощь</a></li>
+					<li><a href="">API</a></li>
+					<li><a href="">Конфидециальность</a></li>
+					<li><a href="">Условия</a></li>
+					<li><a href="">Места</a></li>
+					<li><a href="">Instagram Lite</a></li>
+					<li><a href="">Threads</a></li>
+					<li><a href="">Загрузка контактов и лица, не являющиеся пользователями</a></li>
+					<li><a href="">Meta Verified</a></li>
+				</ul>
+			</div>
+
+			<div id="second-line">
+				<ul>
+					<li>Русский<img id="down" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-64.png"></li>
+					<li>© 2025 Azamat Ilyas</li>
+				</ul>
+
+			</div>
+			
+
+		</footer>
+
 </body>
 </html>
