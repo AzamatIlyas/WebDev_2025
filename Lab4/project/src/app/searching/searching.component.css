@@ -1,0 +1,39 @@
+#inputs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /*background-color: #1fba58;*/
+  width: 100%;
+  height: 50px;
+  gap: 30px;
+}
+
+input{
+  border-radius: 3px;
+  padding-left: 10px;
+  border: 1px solid black;
+  width: 500px;
+  height: 30px;
+}
+
+#adding{
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: midnightblue;
+  height: 30px;
+  width: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  width: 1500px;
+}

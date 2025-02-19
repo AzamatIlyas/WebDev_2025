@@ -1,0 +1,10 @@
+<div id="inputs">
+  <input type="text" id="input" placeholder="Search">
+  <button id="adding">Search</button>
+</div>
+<section id="results">
+  <app-product
+    *ngFor="let product of productList"
+    [products]="product"
+  ></app-product>
+</section>

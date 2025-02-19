@@ -1,0 +1,18 @@
+<section class="listing">
+  <div id="slide">
+    <button (click)="prevImage()">‹</button>
+    <a href="{{products.url}}" target="_blank">
+      <img
+        class="listing-photo"
+        [src]="products.image[currentImageIndex]"
+        alt="Exterior photo of {{ products.name }}"
+        crossorigin
+      />
+    </a>
+    <button (click)="nextImage()">›</button>
+  </div>
+  <h2 class="listing-heading">{{ products.name }}</h2>
+  <p class="listing-location">{{ products.description }}, {{ products.rating }}</p>
+
+</section>
+
