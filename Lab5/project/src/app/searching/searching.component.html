@@ -1,0 +1,23 @@
+<div id="main-part">
+  <div id="major">
+    <p id="heading">What do you want to buy?</p>
+  </div>
+</div>
+
+<div id="inputs">
+  <label>Category:</label>
+  <select [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+    <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+  </select>
+  <input type="text" id="input" placeholder="Search" #filter>
+  <button id="adding" type="submit" (click)="filterBySearch(filter.value)">Search</button>
+  <img id="basket" src="https://cdn3.iconfinder.com/data/icons/shopping-603/48/basket_shopping_shop_heart_like-128.png"
+  [routerLink]="['/liked-busket']">
+</div>
+<section id="results">
+  <app-product
+    *ngFor="let product of filteredItems"
+    [product]="product"
+    (deleteItem)="deleteItem($event)"
+  ></app-product>
+</section>

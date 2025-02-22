@@ -1,0 +1,21 @@
+<!--<div id="inputs">-->
+<!--  <label>Category:</label>-->
+<!--  <select [(ngModel)]="selectedCategory" (change)="filterByCategory()">-->
+<!--    <option *ngFor="let category of categories" [value]="category">{{category}}</option>-->
+<!--  </select>-->
+<!--  <input type="text" id="input" placeholder="Search">-->
+<!--  <button id="adding" type="submit" >Search</button>-->
+<!--</div>-->
+
+<div id="main-part">
+  <div id="major">
+    <p id="heading">Liked Items</p>
+  </div>
+</div>
+
+<section id="results">
+  <app-product
+    *ngFor="let product of filteredItems"
+    [product]="product"
+  ></app-product>
+</section>

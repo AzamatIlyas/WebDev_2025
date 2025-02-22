@@ -1,0 +1,19 @@
+<section class="listing">
+  <div id="slide">
+    <a href="{{product.url}}" target="_blank">
+      <img
+        class="listing-photo"
+        [src]="product.image[currentImageIndex]"
+        alt="Exterior photo of {{ product.name }}"
+        crossorigin
+      />
+    </a>
+    <button type="submit" (click)="prevImage()">‹</button>
+    <button type="submit" (click)="nextImage()">›</button>
+  </div>
+  <h2 class="listing-heading">{{ product.name }}</h2>
+  <p class="listing-location">Description: {{ product.description }}<br>Rating: {{ product.rating }}</p>
+  <a [routerLink]="['/details', product.name]">Learn more</a>
+  <img class="delButton" (click)="deletingElement()" src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/trash-can-128.png">
+</section>
+

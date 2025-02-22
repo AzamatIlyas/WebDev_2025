@@ -1,0 +1,30 @@
+<article >
+  <img
+    class="listing-photo"
+    [src]="product!.image[currentImageIndex]"
+    alt="Exterior photo of {{ product?.name }}"
+    crossorigin
+  />
+  <div id="switch-image">
+    <button (click)="prevImage()">‹</button>
+    <button (click)="nextImage()">›</button>
+  </div>
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ product?.name }}</h2>
+<!--    <p class="listing-location">{{ product?.city }}, {{ product?.state }}</p>-->
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this Item</h2>
+    <ul>
+      <li>Description: {{ product?.description }}</li>
+    </ul>
+    <div id="like">
+      <img (click)="liking()" class="likeButton" *ngIf="!product?.like" src="https://cdn2.iconfinder.com/data/icons/user-interface-line-38/24/Untitled-5-08-128.png">
+      <img (click)="liking()" class="likeButton" *ngIf="product?.like" src="https://cdn0.iconfinder.com/data/icons/social-reaction-and-emoji/519/love-128.png">
+    </div>
+    <div id="sharing">
+      <button class="share" (click)="sendWhatsApp()">Отправить в WhatsApp</button>
+      <button class="share" (click)="sendTelegram()">Отправить в Telegram</button>
+    </div>
+  </section>
+</article>
