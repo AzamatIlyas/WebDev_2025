@@ -1,0 +1,6 @@
+<section>
+  <input type="checkbox" (change)="taskDone()">
+  <a [routerLink]="['/task', task.id]" id="done">{{this.task.name}}</a>
+<!--  <p>{{this.task.status}}</p>-->
+  <p id="deadline">deadline: {{this.task.deadline}}</p>
+</section>

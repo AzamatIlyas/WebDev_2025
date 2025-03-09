@@ -1,0 +1,25 @@
+<div class="inputs">
+  <div id="three">
+    <input [(ngModel)]="title" type="text" class="input" placeholder="Title" required>
+    <input [(ngModel)]="deadline" type="time" class="input" placeholder="Deadline" required>
+    <select [(ngModel)]="selectedCategory" required>
+      <option *ngFor="let category of categoryList" [value]="category">{{category}}</option>
+    </select>
+  </div>
+  <textarea [(ngModel)]="description" id="description" placeholder="Введите описание"></textarea>
+  <button id="adding" (click)="addTask()">Add Task</button>
+  <nav>
+    <button class="category" (click)="allTasks()">All</button>
+    <button class="category" (click)="filterTaskWork()">Work</button>
+    <button class="category" (click)="filterTaskPersonal()">Personal</button>
+    <button class="category" (click)="filterTaskStudy()">Study</button>
+  </nav>
+</div>
+<div id="tasks">
+  <div id="list">
+    <app-task-item
+      *ngFor="let task of filteredTaskList"
+      [task]="task"
+    ></app-task-item>
+  </div>
+</div>

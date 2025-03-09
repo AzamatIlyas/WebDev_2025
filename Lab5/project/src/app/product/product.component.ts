@@ -14,6 +14,7 @@ import {RouterLink} from '@angular/router';
 export class ProductComponent {
   @Input() product!: Products;
   @Output() deleteItem = new EventEmitter<Products>();
+
   currentImageIndex = 0;
 
   nextImage() {
